@@ -7,9 +7,15 @@ import ProductTable from '../components/ProductTable/ProductTable';
 import { getAllProducts } from '../services/api';
 
 export default function ProductLists() {
-  const { data, isLoading, error } = useQuery('products', getAllProducts);
+  const { data, isLoading, isError } = useQuery('products', getAllProducts);
 
   const products = data?.Records;
+  if (isLoading) {
+    return <Text>Loading...</Text>;
+  }
+  if (isError) {
+    return <Text>Error Loading Data</Text>;
+  }
 
   return (
     <Container maxW="3xl">
