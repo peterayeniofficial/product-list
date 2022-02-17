@@ -18,7 +18,7 @@ export default function ProductLists() {
   }
 
   return (
-    <Container maxW="3xl">
+    <Container maxW="2xl">
       <Stack
         as={Box}
         textAlign="center"

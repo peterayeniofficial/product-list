@@ -20,12 +20,12 @@ interface ProductTableProps {
 
 export default function ProductTable({ products }: ProductTableProps) {
   return (
-    <Table variant="striped" colorScheme="teal">
+    <Table variant="striped" colorScheme="orange">
       <Thead>
         <Tr>
           <Th>Name</Th>
-          <Th>Description</Th>
-          <Th>Visible</Th>
+          <Th display={{ sm: 'none', xl: 'table-cell' }}>Description</Th>
+          <Th display={{ sm: 'none', xl: 'table-cell' }}>Visible</Th>
           <Th isNumeric>Price</Th>
         </Tr>
       </Thead>
@@ -33,8 +33,12 @@ export default function ProductTable({ products }: ProductTableProps) {
         {products.map((product) => (
           <Tr key={product.ID}>
             <Td fontWeight="extrabold">{product.Name}</Td>
-            <Td>{truncateText(product.Description, 10)}</Td>
-            <Td>{product.Visible ? 'Yes' : 'No'}</Td>
+            <Td display={{ sm: 'none', xl: 'table-cell' }}>
+              {truncateText(product.Description, 10)}
+            </Td>
+            <Td display={{ sm: 'none', xl: 'table-cell' }}>
+              {product.Visible ? 'Yes' : 'No'}
+            </Td>
             <Td isNumeric>
               {formatCurrency(product.Price, product.CurrencyCode)}
             </Td>
