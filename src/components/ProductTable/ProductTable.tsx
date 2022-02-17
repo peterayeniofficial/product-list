@@ -2,6 +2,7 @@
 /* eslint-disable object-curly-newline */
 import React from 'react';
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td } from '@chakra-ui/react';
+import truncateText from '../../utils/truncateText';
 
 interface Product {
   Name: string;
@@ -30,7 +31,7 @@ export default function ProductTable({ products }: ProductTableProps) {
         {products.map((product) => (
           <Tr key={product.ID}>
             <Td fontWeight="extrabold">{product.Name}</Td>
-            <Td>{product.Description}</Td>
+            <Td>{truncateText(product.Description, 10)}</Td>
             <Td>{product.Visible ? 'Yes' : 'No'}</Td>
             <Td isNumeric>{product.Price}</Td>
           </Tr>
