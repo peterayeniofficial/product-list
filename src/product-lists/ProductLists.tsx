@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Container, Stack } from '@chakra-ui/react';
 import Header from '../components/Header';
+import ProductTable from '../components/ProductTable/ProductTable';
 
 export default function ProductLists() {
   return (
@@ -12,6 +13,7 @@ export default function ProductLists() {
         py={{ base: 20, md: 36 }}
       >
         <Header title="Product List" />
+        <ProductTable products={[]} />
       </Stack>
     </Container>
   );
