@@ -19,7 +19,7 @@ export default function ProductLists() {
         spacing={{ base: 8, md: 14 }}
         py={{ base: 20, md: 36 }}
       >
-        <Header title="Product List" />
+        <Header title="Products List" />
         <ProductTable products={products} />
       </Stack>
     </Container>
