@@ -2,13 +2,13 @@
 import { encode } from 'base-64';
 
 export const getAllProducts = async () => {
-  const username = 'adrian+1004930927@nexudus.com';
-  const password = '9h3A3klZXz5W';
   const response = await fetch(
-    'https://spaces.nexudus.com/api/billing/products?page=1&size=25',
+    `${process.env.REACT_APP_API_SERVER}/products?page=1&size=25`,
     {
       headers: new Headers({
-        Authorization: `Basic ${encode(`${username}:${password}`)}`,
+        Authorization: `Basic ${encode(
+          `${process.env.REACT_APP_USER_NAME}:${process.env.REACT_APP_PASSWORD}`
+        )}`,
       }),
     }
   );

@@ -2,8 +2,8 @@
 /* eslint-disable object-curly-newline */
 import React from 'react';
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td } from '@chakra-ui/react';
-import truncateText from '../../utils/truncateText';
-import formatCurrency from '../../utils/formatCurrency';
+import truncateText from '../utils/truncateText';
+import formatCurrency from '../utils/formatCurrency';
 
 interface Product {
   Name: string;
