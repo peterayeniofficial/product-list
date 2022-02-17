@@ -14,6 +14,7 @@ interface ProductTableProps {
 }
 
 export default function ProductTable({ products }: ProductTableProps) {
+  console.log(products);
   return (
     <Table variant="striped" colorScheme="teal">
       <Thead>
