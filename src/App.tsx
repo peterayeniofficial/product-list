@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import ProductLists from './product-lists/ProductLists';
 
 function App() {
-  return <Box>ProductLists</Box>;
+  return <ProductLists />;
 }
 
 export default App;
